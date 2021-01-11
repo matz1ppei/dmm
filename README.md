@@ -1,4 +1,5 @@
 # dmm
+[![CircleCI](https://circleci.com/gh/matz1ppei/dmm.svg?style=svg)](https://circleci.com/gh/matz1ppei/dmm)  
 
 DMM API Client for Python
 
