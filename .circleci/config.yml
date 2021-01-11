@@ -1,0 +1,29 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/load-cache
+      - run:
+          name: Install dependencies
+          command: |
+            python -m pip install --upgrade pip
+            pip install pipenv
+            pipenv install --python /usr/local/bin/python --dev
+      - python/install-deps
+      - python/save-cache
+      - run:
+          name: Run pytest
+          command: pipenv run pytest --apiid $API_ID --affiliateid $AFFILIATE_ID
+
+workflows:
+  main:
+    jobs:
+      - build-and-test:
+          context:
+            - DMM
