@@ -14,7 +14,10 @@ setup(
     url='https://github.com/matz1ppei/dmm',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    classifiers=[],
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+    ],
     install_requires=['requests'],
-    tests_require=['pytest', 'pytest-cov']
+    tests_require=['pytest', 'pytest-cov', 'pytest-flake8']
 )

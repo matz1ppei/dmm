@@ -8,6 +8,7 @@ pytest = "*"
 pytest-cov = "*"
 pytest-flake8 = "*"
 dmm = {editable = true,path = "."}
+twine = "*"
 
 [packages]
 requests = "*"
